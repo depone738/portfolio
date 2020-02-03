@@ -5,6 +5,7 @@
 </head>
 <body>
 	<button id="myButton">Click me</button>
+	<form id="form_dbl" dbClick="dbClickFunction(this.id)"></form>
 	<input type="button" value="배경색 변경" onClick="document.bgColor='red';">
 	<input type=" text" id="name1" onfocus="focusFunction(this.id)">
 
@@ -13,6 +14,7 @@
 
 	<input type="text" id="name2" onfocus="focusFunction(this.id)"
 		onblur="blurFunction(this.id)">
+	</form>	
 	<script type="text/javascript">
 		var button = document.getElementById('myButton');
 		button.addEventListener('click', function() {
