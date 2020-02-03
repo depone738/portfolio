@@ -5,11 +5,34 @@
 </head>
 <body>
 	<button id="myButton">Click me</button>
-<script type="text/javascript"> 
-var button = document.getElementById('myButton'); 
-button.addEventListener('click', function() { 
-document.write('button clicked!'); 
-}); 
+	<input type="button" value="배경색 변경" onClick="document.bgColor='red';">
+	<input type=" text" id="name1" onfocus="focusFunction(this.id)">
+
+	<input type="text" id="name2" onfocus="focusFunction(this.id)"
+		onblur="blurFunction(this.id)">
+
+	<input type="text" id="name2" onfocus="focusFunction(this.id)"
+		onblur="blurFunction(this.id)">
+	<script type="text/javascript"> 
+		var button = document.getElementById('myButton'); 
+		button.addEventListener('click', function() { 
+		document.write('button clicked!'); 
+		}); 
+</script>
+	<script>
+function dblClickFunction(x) {
+if(document.getElementById(x).style.background == "white"){
+   document.getElementById(x).style.background = "green";
+}else{
+   document.getElementById(x).style.background = "white";
+}
+}
+function focusFunction(x) {
+    document.getElementById(x).style.background = "yellow";
+}
+function blurFunction(x) {
+    document.getElementById(x).style.background = "red";
+}
 </script>
 </body>
 </html>
